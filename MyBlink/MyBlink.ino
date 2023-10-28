@@ -44,11 +44,11 @@ void serialEvent() {
 void triggerLEDs(int ledState) {
     switch(ledState) {
       case BLUE:    
-        //analogWrite(LED_BLUE, brightness);
+        analogWrite(LED_BLUE, brightness);
         digitalWrite(LED_BUILTIN, LOW);
         break;
       case RED:
-        //analogWrite(LED_BLUE, LOW);
+        analogWrite(LED_BLUE, LOW);
         digitalWrite(LED_BUILTIN, HIGH);
         break; 
     }
