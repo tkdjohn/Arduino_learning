@@ -35,7 +35,7 @@ void setup() {
 void loop() {
   long current_ms = millis();
   if (current_ms >= nextUpdate_ms) {
-    sevseg.setNumber(curNumber, curNumber % 4);
+    sevseg.setNumber(curNumber);
     curNumber = curNumber >= 9999 ? 0 : curNumber + 1;
     nextUpdate_ms = current_ms + delay_ms;
   }
