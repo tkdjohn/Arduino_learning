@@ -50,6 +50,6 @@ void serialEvent() {
       delay(200);
     }  
     delay(1000);
-    // Serial.println("one");
+    //Serial.println(buffer);
   }
 }

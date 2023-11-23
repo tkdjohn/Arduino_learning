@@ -5,7 +5,7 @@ Wiring:
 Nano pins:  D7  D8  D9 D10 D11 D12
           --------------------------
           | 12  11  10   9   8   7 |
-          |      PN: 564aAH        |
+          |      PN: 5641AH        |
           |  1   2   3   4   5   6 |
           --------------------------
 Nano pins:  D2  D3 D13  D4  D5  D6  
@@ -23,7 +23,7 @@ void setup() {
 
   while (!Serial)
     ;
-  Serial.begin(115200);
+  Serial.begin(9600);
   byte digitPins[] = { 7, 10, 11, 6 };
   byte segmentPins[] = { 8, 12, 4, 3, 2, 9, 5, 13 };
   sevseg.begin(COMMON_CATHODE, 4, digitPins, segmentPins, false);
