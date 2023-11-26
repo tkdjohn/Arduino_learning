@@ -9,8 +9,6 @@
 //#include <gfxfont.h>
 
 
-#define OLED_RESET 4
-
 Adafruit_SSD1306 display(128, 64);
 
 void setup() {
