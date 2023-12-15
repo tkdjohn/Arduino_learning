@@ -17,14 +17,14 @@
 */
 //                                Compiled with Arduino Nano
 //   NOTE: Some clones require using old bootloader option for upload (Tools --> Processor --> ATMega328P (Old Bootloader))
-#define VERSION "v0.1s"   // 's' appended to version means Split Dummy Load (ie the diode pulls voltage from 
+#define VERSION "v0.2s"   // 's' appended to version means Split Dummy Load (ie the diode pulls voltage from 
                           // the center of a 2 banks of resistors that provide the 50 Ohm load. 
 #include <Wire.h>
 #include <Adafruit_GFX.h>       // https://github.com/adafruit/Adafruit-GFX-Library
 #include <Adafruit_SSD1306.h>   // https://github.com/adafruit/Adafruit_SSD1306
 
 // #define DEBUG_SENSOR                 // Uncomment to calibrate and debug
-#define DEBUG_CALC 
+// #define DEBUG_CALC 
 // #define DEBUG_DISPLAY
 // #define DEBUG_TIMER
 /*

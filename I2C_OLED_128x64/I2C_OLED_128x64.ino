@@ -12,10 +12,10 @@
 Adafruit_SSD1306 display(128, 64);
 
 void setup() {
-  Serial.begin(115200);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  while (!Serial.available());
   display.clearDisplay();
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,0);
   display.println("1BCDEFGHIJKLMNOPQRSTU");
@@ -28,10 +28,13 @@ void setup() {
   display.println("8BCDEFGHIJKLMNOPQRSTU");
   display.println("9 this line is hidden");
   display.display();
+  Serial.begin(115200);
+  Serial.println("begin");
+
 }
 
 void loop() {
-  
+    serialEventRun();
 }
 
 void serialEvent() {
@@ -45,6 +48,7 @@ void serialEvent() {
   
     char buffer[22];
     size_t size1 = Serial.readBytes(buffer, 21);
+    Serial.println(buffer);
     buffer[size1] = '\0';
     display.print(buffer);
 
@@ -62,6 +66,5 @@ void serialEvent() {
     // display.stopscroll();
     // delay(1000);
     display.display();
-    Serial.println(buffer);
   }
 }
